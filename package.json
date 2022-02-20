@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "apollo-server": "^3.6.3",
+    "graphql": "^16.3.0",
+    "nodemon": "^2.0.15"
+  },
+  "name": "gql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev":"npx nodemon src/index.js"
+  }
+}
