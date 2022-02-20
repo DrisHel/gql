@@ -26,16 +26,19 @@ type Post{
 type Query{
     hello: String
     users:[User]!
+    getUserByEmail(email: String!):User!
 }
 `;
+
+const  users =[
+    {_id: String(Math.random()), name:'Doris', email:'doris@teste.com', active:true},
+    {_id: String(Math.random()), name:'Debora', email:'debora@teste.com', active:false},
+    {_id: String(Math.random()), name:'Josue', email:'josue@teste.com', active:true},
+];
 const resolvers = {
     Query: {
         hello:() => 'Hello Word!',
-        users:() =>[
-            {_id: String(Math.random()), name:'Doris', email:'doris@teste.com', active:true},
-            {_id: String(Math.random()), name:'Debora', email:'debora@teste.com', active:false},
-            {_id: String(Math.random()), name:'Josue', email:'josue@teste.com', active:true},
-        ]
+       
     }
 };
 
