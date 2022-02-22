@@ -2,13 +2,22 @@
   "dependencies": {
     "apollo-server": "^3.6.3",
     "graphql": "^16.3.0",
-    "nodemon": "^2.0.15"
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.16.2"
   },
   "name": "gql",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev":"npx nodemon src/index.js"
+    "dev": "npx nodemon --exec babel-node src/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "sequelize-cli": "^6.4.1"
   }
 }

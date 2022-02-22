@@ -1,4 +1,11 @@
-const { ApolloServer , gql } = require('apollo-server');
+import startServer from './startServer';
+import typeDefs from './graphql/typeDefs';
+import resolvers from './graphql/resolvers';
+
+startServer({typeDefs,resolvers});
+
+
+/* const { ApolloServer , gql } = require('apollo-server');
 
 //toda request é POST
 // toda request bate no mesmo endpoint (/graphql)
@@ -38,6 +45,9 @@ const  users =[
 const resolvers = {
     Query: {
         hello:() => 'Hello Word!',
+        users:() => {
+            return users.find({User})
+        }
        
     }
 };
@@ -45,3 +55,4 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers});
 server.listen().then(({ url }) => console.log(`Server started at ${url}`));
 
+ */
